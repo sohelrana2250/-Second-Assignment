@@ -2,8 +2,14 @@ body {
 
     margin: 0%;
     padding: 0%;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
 }
+
+/*********** top banner-section ****
+ **********************************/
 
 .Header-section {
 
@@ -19,13 +25,53 @@ body {
     padding: 30px;
     margin-top: 30px;
     border-radius: 10px;
+
+    animation-name: example;
+    animation-duration: 10s;
+
+}
+
+/*********** Animation-Section ****
+ **********************************/
+
+@keyframes example {
+    0% {
+        background-color: black;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    0.50% {
+        background-image: linear-gradient(white, blue);
+    }
+
+    0.75% {
+        background-image: linear-gradient(green, rgb(50, 15, 177));
+    }
+
+    1% {
+        background-color: black;
+
+    }
 }
 
 .top-banner {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transition: transform 5s linear 4s, transform 6s;
 }
+
+.top-banner:hover {
+
+    border: 2px solid rgb(172, 60, 88);
+    transform: scale(0.20) rotate(20deg);
+    background-color: rgb(66, 59, 59);
+    border-radius: 10px;
+}
+
 
 .banner-info {
 
@@ -38,6 +84,14 @@ body {
     margin-right: 25%;
     font-weight: 700;
     color: white;
+
+}
+
+.banner-info h1 :hover {
+
+    border: 2px solid rgb(172, 60, 88);
+    transform: scale(0.50) rotate(60deg);
+    background-color: gray;
 
 }
 
@@ -63,7 +117,17 @@ body {
     border-radius: 10px;
     padding: 10px 40px;
     background-color: rgb(233, 41, 7);
-    color: white
+    color: white;
+    transition: transform 5s linear 2s, transform 6s;
+}
+
+.btn:hover {
+
+    border: 2px solid rgb(172, 60, 88);
+    transform: scale(0.50) rotate(360deg);
+
+
+
 }
 
 .font-style {
@@ -76,6 +140,10 @@ body {
     height: 613px;
 
 }
+
+/*********** player image and navigation and
+  player information-section 
+  **************************************/
 
 /* middle -section */
 .main-section {
@@ -192,7 +260,8 @@ nav li:hover {
     background: #161616;
     margin-top: 90px;
 } */
-
+/*********** Footer-section ****
+ **********************************/
 .footer-section {
     display: flex;
     flex-direction: column;
@@ -269,7 +338,8 @@ hr {
 
 
 
-
+/*********** Mobile Responsive-section ****
+ **********************************/
 
 @media only screen and (max-width:576px) {
     .top-banner {
@@ -323,6 +393,9 @@ hr {
 
 
 }
+
+/*********** IPAD OR Tablet responsive Section ****
+ **********************************/
 
 @media screen and (min-width:577px) and (max-width:992px) {
     .top-banner {
